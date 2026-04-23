@@ -100,7 +100,7 @@ Projeyi yerel makinenizde çalıştırmak için:
 
 1. Depoyu klonlayın:
    ```bash
-   git clone [https://github.com/kullaniciadi/flight-radar.git](https://github.com/kullaniciadi/flight-radar.git)
+   git clone https://github.com/HasanEROL1/flight-radar
 Gerekli bağımlılıkları yükleyin:
 
 Bash
