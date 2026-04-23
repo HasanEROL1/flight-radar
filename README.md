@@ -116,6 +116,8 @@ npm start
 ⚙️ Redux State Yapısı
 Proje iki ana slice üzerinden yönetilir:
 
+![tanıtım](flight-radar.gif)
+
 flightSlice: API'den gelen ham uçuş verilerini, yükleme durumunu (isLoading) ve hataları (error) tutar.
 
 detailSlice: Seçili uçağın detaylarını ve haritadaki rota (route) bilgilerini yönetir.
