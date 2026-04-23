@@ -2,12 +2,12 @@ import { MapContainer, Marker, Polyline, Popup, TileLayer } from "react-leaflet"
 import "leaflet/dist/leaflet.css";
 import "leaflet-rotatedmarker"
 import { useSelector } from "react-redux";
-import { icon } from "leaflet";
+
 import { getIcon } from './../utils/constant';
 import { useDispatch } from "react-redux";
 import { clearRoute, open } from "../redux/slices/detailSlice";
-import { useEffect } from "react";
-import { getFlights } from "../redux/actions";
+
+
 
 const Map = () => {
     const dispatch = useDispatch()
