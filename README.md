@@ -54,9 +54,6 @@ npm install react-redux @reduxjs/toolkit react-leaflet leaflet react-paginate bo
 4. Uygulamayı başlatın:
 npm start
 
-Aşağıda, paylaştığın List (Liste) ve Map (Harita) bileşenlerini içeren projen için profesyonel, GitHub uyumlu bir README.md dosyası hazırladım.
-
-Tüm kod blokları ve açıklamalar GitHub'ın Markdown standartlarına (GFM) göre düzenlenmiştir.
 
 Markdown
 # ✈️ Flight Radar Dashboard
