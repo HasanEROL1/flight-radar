@@ -8,7 +8,7 @@ const Header = ({ visibleCount }) => {
         <div>
             <header>
                 <Link to="/" className="logo">
-                    <img src="logo.webp" alt="logo" width={40} />
+                    <img src="logo.webp" alt="logo"  />
                     <h3>Uçuş Radarı</h3>
                 </Link>
 

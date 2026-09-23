@@ -18,7 +18,7 @@ const detailSlice = createSlice({
         open: (state, action) => {
             state.detailId = action.payload;
         },
-        close: (state, action) => {
+        close: (state) => {
             state.detailId = null;
         },
         clearRoute: (state) => {
@@ -26,7 +26,7 @@ const detailSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(getDetails.pending, (state, action) => {
+        builder.addCase(getDetails.pending, (state) => {
             state.isLoading = true;
         })
         builder.addCase(getDetails.rejected, (state, action) => {

@@ -12,7 +12,7 @@ const List = () => {
     const dispatch = useDispatch();
     const { isLoading, error, flights } = useSelector((store) => store.flight)
 
-    // kaçpncı elemandandan itibaren kesilecek
+    // kaçıncı elemandandan itibaren kesilecek
     const [start, setStart] = useState(0)
 
     // sayfa başına kaç eleman gösterilecek
@@ -22,7 +22,7 @@ const List = () => {
     const end = start + perPage
 
     // slice methodu ile başlangıç ve bitiş elemanlarını belirleyip kesiyoruz
-    const currFlights = flights.slice(start, end)
+    const currFlights = (flights || []).slice(start, end)
 
     // toplam sayfa sayısı
     const total = Math.ceil(flights.length / perPage)

@@ -16,6 +16,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: #213547;
+  background-color: #ffffff;
 }
 
 a {
@@ -54,17 +57,16 @@ button {
 
 button:hover {
   border-color: #646cff;
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-:root {
-  color: #213547;
-  background-color: #ffffff;
-}
+
+
 
 a:hover {
   color: #747bff;
@@ -82,6 +84,10 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    img {
+      width: 40px;
+    }
   }
 
   .buttons {
@@ -202,7 +208,6 @@ header {
 
   div {
     display: flex;
-
     align-items: center;
     gap: 10px;
 
@@ -225,7 +230,9 @@ header {
     font-size: 17px;
     transition: all 0.3s;
 
-
+    &:hover {
+      background: #ef444e;
+    }
   }
 }
 
@@ -500,7 +507,7 @@ header {
   }
 }
 
-.leaflet-container table {
+.list-container table {
   border-radius: 10px;
   overflow: hidden;
 }
@@ -539,8 +546,8 @@ header {
     background: white;
   }
 
-  li::first-child,
-  :last-child {
+  &:first-child,
+  &:last-child {
     padding: 10px 10px;
     text-align: center;
     white-space: nowrap;
@@ -552,8 +559,3 @@ header {
   }
 }
 
-.error {
-  font-size: 16px;
-  text-align: center;
-  color: rgb(101, 101, 101);
-}

@@ -11,38 +11,36 @@ import Error from './../Error';
 
 const Modal = () => {
 
-    const dispatch = useDispatch()
-    const { detailId, isLoading, error, info } = useSelector((store) => store.detail)
+  const dispatch = useDispatch()
+  const { detailId, isLoading, error, info } = useSelector((store) => store.detail)
 
-    useEffect(() => {
-        // Eğer detailId yoksa modal gösterme
-        if (!detailId) return
-
-
-        dispatch(getDetails(detailId))
-    }, [detailId])
+  useEffect(() => {
+    // Eğer detailId yoksa modal gösterme
+    if (!detailId) return
+    dispatch(getDetails(detailId))
+  }, [detailId, dispatch])
 
 
 
-    return (
-        detailId && <div className="modal-outer">
-            <div className="modal-inner">
-                <Head info={info} />
+  return (
+    detailId && <div className="modal-outer">
+      <div className="modal-inner">
+        <Head info={info} />
 
-                {isLoading ? (<Loader />) : error ? (<Error message={error} />) :
-                    (info && (<div className="info-wrapper">
-                        <div>
-                            <Gallery data={info.aircraft.images} />
-                            <Airport data={info.airport} />
-                            <Time data={info.time} />
-                            <Aircraft data={info.aircraft} />
-                        </div>
-                    </div>
-                    ))}
-
+        {isLoading ? (<Loader />) : error ? (<Error message={error} />) :
+          (info && (<div className="info-wrapper">
+            <div>
+              <Gallery data={info.aircraft.images} />
+              <Airport data={info.airport} />
+              <Time data={info.time} />
+              <Aircraft data={info.aircraft} />
             </div>
-        </div>
-    );
+          </div>
+          ))}
+
+      </div>
+    </div>
+  );
 
 
 }

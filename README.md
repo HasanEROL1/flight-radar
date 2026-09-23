@@ -110,6 +110,7 @@ Uygulamayı başlatın:
 
 Bash
 npm start
+
 ⚙️ Redux State Yapısı
 Proje iki ana slice üzerinden yönetilir:
 

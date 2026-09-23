@@ -16,8 +16,8 @@ const Time = ({ data }) => {
             </div>
 
             <div>
-                <span>Gerçek.</span>
-                <span>{c(t(data.scheduled?.departure))}</span>
+                <span>Gerçekleşen</span>
+                <span>{c(t(data.actual?.departure ?? data.estimated?.departure ?? data.scheduled?.departure))}</span>
             </div>
 
             <div>

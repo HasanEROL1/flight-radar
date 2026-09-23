@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import List from "./pages/List"
 import Map from "./pages/Map"
@@ -9,12 +10,12 @@ import Modal from "./components/Modal"
 
 const App = () => {
   // Detayı gösterilen uçuşun id'si
-  const [detailId, setDetailId] = useState(null);
+  const [detailId] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getFlights())
-  }, [])
+  }, [dispatch])
   return (
     <BrowserRouter>
       <Header />
